@@ -12,3 +12,16 @@ class IndexView(TemplateView):
         }
 
         return context
+
+
+class ChatView(TemplateView):
+    template_name = 'chat/chat.html'
+
+    def get_context_data(self, **kwargs):
+
+        context = {
+            'greeting': 'Hello',
+            'name': 'Django'
+        }
+
+        return context
