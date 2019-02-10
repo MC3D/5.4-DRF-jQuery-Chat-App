@@ -1,9 +1,3 @@
-# from django.http import HttpResponse
-#
-#
-# def index():
-#     return HttpResponse('Hello Chat App!')
-
 from django.views.generic import TemplateView
 
 
