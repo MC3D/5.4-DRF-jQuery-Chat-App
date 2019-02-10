@@ -2,6 +2,13 @@
 
 {% block content %}
 
-<h1>I am the chat page</h1>
+<h1>I am the chat app</h1>
+
+{% for message in messages %}
+
+<p>{{message.text}}</p>
+<span>{{message.user}}</span>
+
+{% endfor %}
 
 {% endblock content %}
