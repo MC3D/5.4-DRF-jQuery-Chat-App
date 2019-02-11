@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 
-from chat.models import Message
+from .models import Message
+# form .forms import CreateMessageForm
 
 
 # class IndexView(TemplateView):
@@ -32,7 +33,8 @@ from chat.models import Message
 class ChatIndex(TemplateView):
     template_name = 'chat/chat.html'
 
-    def get_context_data(self, **kwargs):
-        messages = Message.objects.order_by('created')
-        context = {'messages': messages}
-        return context
+    # def get_context_data(self, **kwargs):
+    #     messages = Message.objects.order_by('created').reverse()
+    #     context = {'messages': messages}
+    #     return context
+
