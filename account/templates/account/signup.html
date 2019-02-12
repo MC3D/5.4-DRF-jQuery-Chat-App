@@ -4,4 +4,28 @@
 
 <h2>Please Sign up!</h2>
 
+<form method="POST" action="{% url 'account:signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!--<table>-->
+        <!--<tr>-->
+            <!--<td>username</td>-->
+            <!--<td><input type="text" name="username"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>password</td>-->
+            <!--<td><input type="password" name="password"></td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+            <!--<td>password again</td>-->
+            <!--<td><input type="password" name="password2"></td>-->
+        <!--</tr>-->
+        <!--</table>-->
+
+        <input type="submit" value="Create Account">
+    </form>
+
+    <p><a href="{% url 'account:login' %}">Already Have an Account? Login.</a></p>
+
 {% endblock %}
